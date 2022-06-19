@@ -1,5 +1,5 @@
 const admin = require('firebase-admin');
-const app = require('express')();
+const express = require('express');
 
 const serviceAccount = require('./secrets/a-fox-like-me-firebase-adminsdk-w09a1-fdb7897d95.json');
 
@@ -9,6 +9,18 @@ admin.initializeApp({
 
 const storage = admin.storage();
 const bucket = storage.bucket('a-fox-like-me.appspot.com');
+
+const app = express();
+
+function logout(req, res, next) {
+  console.log('Request:', req.method, req.url);
+  next();
+}
+
+app.use([
+  express.json(),
+  logout,
+]);
 
 app.get('/', (req, res) => {
   res.status(200).json({

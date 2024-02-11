@@ -1,6 +1,6 @@
 # skulk.dev API Guide
 
-This guide will help you get started with integrating our API into your applications. Our API provides access to [https://opensea.io/collection/philosophicalfoxes](Philosophical Fox)-related resources, including thumbnails of various sizes and formats.
+This guide will help you get started with integrating our API into your applications. Our API provides access to [Philosophical Fox](https://opensea.io/collection/philosophicalfoxes)-related resources, including thumbnails of various sizes and formats.
 
 ## Table of Contents
 
